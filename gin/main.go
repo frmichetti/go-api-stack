@@ -14,6 +14,13 @@ func main() {
 	r.StaticFS("/more_static", http.Dir("more_static"))
 	r.StaticFile("/favicon.ico", "./resources/favicon.ico")
 
+	r.GET("/", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"message": "Hello",
+			"success": true,
+		})
+	})
+
 	r.GET("/api/ping", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"message": "pong",
