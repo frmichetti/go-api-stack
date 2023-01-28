@@ -3,6 +3,7 @@ module main
 go 1.13
 
 require (
+	github.com/gin-gonic/contrib v0.0.0-20221130124618-7e01895a63f2
 	github.com/gin-gonic/gin v1.8.2 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/goccy/go-json v0.10.0 // indirect
